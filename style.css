@@ -87,6 +87,7 @@ h4 {
  }
 
  .btn {
+     cursor: pointer;
      background-color: #9c88ff;
      box-shadow: var(--box-shadow);
      color: #fff;
@@ -98,6 +99,9 @@ h4 {
      width: 100%;
  }
 
+ .btn:focus, .delete-btn:focus {
+     outline: 0;
+ }
  .list {
      list-style-type: none;
      padding: 0;
@@ -114,3 +118,31 @@ h4 {
      padding: 10px;
      margin: 10px 0;
  }
+
+ .list li.plus {
+     border-right: 5px solid #2ecc71;
+ }
+.list li.minus {
+    border-right: 5px solid #c0392b;
+}
+
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #c0392b;
+    border: 0;
+    color:#fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
